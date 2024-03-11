@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
 
 const ReactionSchema = new mongoose.Schema({
   reactionId: {
@@ -17,7 +18,7 @@ const ReactionSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    get: timestamp => dateFormat(timestamp) 
+    get: timestamp => moment(timestamp).format('2024-12-25') 
   }
 });
 
