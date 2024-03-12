@@ -18,7 +18,7 @@ const ReactionSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    get: timestamp => moment(timestamp).format('2024-12-25') 
+    get: timestamp => moment(timestamp).format('YYYY-MM-DD') 
   }
 });
 
